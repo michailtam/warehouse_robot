@@ -45,7 +45,7 @@
   <!-- ROS 2 Control -->
   <gazebo>
     <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-      <parameters>$(find warehouse_bot_controller)/config/warehouse_bot_controllers.yaml</parameters>
+      <parameters>$(find warehouse_bot_controller)/config/controllers.yaml</parameters>
     </plugin>
     <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu">
     </plugin>

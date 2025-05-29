@@ -111,7 +111,6 @@ def generate_launch_description():
             '-P', pitch,
             '-Y', yaw
         ]
-        # parameters=[{'use_sim_time': True}]
     )
 
     # Connect Gazebo with ROS2
