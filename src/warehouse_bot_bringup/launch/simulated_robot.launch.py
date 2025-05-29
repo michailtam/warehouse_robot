@@ -10,7 +10,7 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
 
     use_slam = LaunchConfiguration("use_slam")
-    use_rviz = LaunchConfiguration("use_slam")
+    use_rviz = LaunchConfiguration("use_rviz")
 
     # Declare the launch arguments
     use_slam_arg = DeclareLaunchArgument(
