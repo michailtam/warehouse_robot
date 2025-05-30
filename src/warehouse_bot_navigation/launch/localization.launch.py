@@ -8,6 +8,7 @@ from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 
 def generate_launch_description():
 
+    # Define the launch configuration
     use_sim_time = LaunchConfiguration("use_sim_time")
     amcl_config = LaunchConfiguration("amcl_config")
     lifecycle_nodes = ["map_server", "amcl"]
@@ -27,12 +28,14 @@ def generate_launch_description():
         description="Full path to amcl yaml file to load"
     )
 
+    # Path to the map saved on hard disk
     map_path = PathJoinSubstitution([
         get_package_share_directory("warehouse_bot_navigation"),
         "maps",
         "map.yaml"
     ])
     
+    # Load the map for navigation
     nav2_map_server = Node(
         package="nav2_map_server",
         executable="map_server",
@@ -44,6 +47,7 @@ def generate_launch_description():
         ],
     )
 
+    # Start AMCL process for localization
     nav2_amcl = Node(
         package="nav2_amcl",
         executable="amcl",

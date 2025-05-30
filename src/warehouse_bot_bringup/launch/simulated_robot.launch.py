@@ -83,7 +83,7 @@ def generate_launch_description():
         condition=IfCondition(use_slam)
     )
 
-    # Start SLAM process automatically without doing it manually
+    # Start the SLAM process for map creation automatically without doing it manually
     nav2_lifecycle_manager = Node(
         package="nav2_lifecycle_manager",
         executable="lifecycle_manager",
