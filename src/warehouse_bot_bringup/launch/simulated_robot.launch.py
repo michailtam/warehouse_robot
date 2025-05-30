@@ -68,19 +68,34 @@ def generate_launch_description():
         condition=IfCondition(use_slam)
     )
 
-    lifecycle_nodes = ["map_saver_server", "slam_toolbox"]
+    # Save the map to hard disk when SLAM is desired
+    nav2_map_saver = Node(
+        package="nav2_map_server",
+        executable="map_saver_server",
+        name="map_saver_server",
+        output="screen",
+        parameters=[
+            {"save_map_timeout": 5.0},
+            {"use_sim_time": use_sim_time},
+            {"free_thresh_default": 0.196},
+            {"occupied_thresh_default": 0.65}
+        ],
+        condition=IfCondition(use_slam)
+    )
 
-    # nav2_lifecycle_manager = Node(
-    #     package="nav2_lifecycle_manager",
-    #     executable="lifecycle_manager",
-    #     name="lifecycle_manager_slam",
-    #     output="screen",
-    #     parameters=[
-    #         {"node_names": lifecycle_nodes},
-    #         {"use_sim_time": use_sim_time},
-    #         {"autostart": True}
-    #     ],
-    # )
+    # Start SLAM process automatically without doing it manually
+    nav2_lifecycle_manager = Node(
+        package="nav2_lifecycle_manager",
+        executable="lifecycle_manager",
+        name="lifecycle_manager_slam",
+        output="screen",
+        parameters=[
+            {"node_names": ["map_saver_server", "slam_toolbox"]},
+            {"use_sim_time": use_sim_time},
+            {"autostart": True}
+        ],
+        condition=IfCondition(use_slam)
+    )
 
     # Launch robot localization
     robot_localization = Node(
@@ -111,10 +126,11 @@ def generate_launch_description():
         use_slam_arg,
         use_rviz_arg,
         slam_config_arg,
-        # nav2_lifecycle_manager,
         gazebo,
         controller,
         slam,
         robot_localization,
+        nav2_map_saver,
+        nav2_lifecycle_manager,
         rviz
     ])
