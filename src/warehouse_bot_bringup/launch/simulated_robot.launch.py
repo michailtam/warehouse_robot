@@ -1,7 +1,7 @@
 import os
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
-from launch.conditions import IfCondition
+from launch.conditions import IfCondition, UnlessCondition
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
@@ -55,6 +55,16 @@ def generate_launch_description():
         )
     )
 
+    # Start the Localization process
+    localization = IncludeLaunchDescription(
+        os.path.join(
+            get_package_share_directory("warehouse_bot_navigation"),
+            "launch",
+            "localization.launch.py"
+        ),
+        condition=UnlessCondition(use_slam)
+    )
+
     # Launch SLAM
     slam = Node(
         package="slam_toolbox",
@@ -97,8 +107,8 @@ def generate_launch_description():
         condition=IfCondition(use_slam)
     )
 
-    # Launch robot localization
-    robot_localization = Node(
+    # Improve the Localization with an Extended Kalman Filter (EKF) 
+    ekf = Node(
         package="robot_localization",
         executable="ekf_node",
         name="ekf_filter_node",
@@ -128,8 +138,9 @@ def generate_launch_description():
         slam_config_arg,
         gazebo,
         controller,
+        localization,
         slam,
-        robot_localization,
+        ekf,
         nav2_map_saver,
         nav2_lifecycle_manager,
         rviz
