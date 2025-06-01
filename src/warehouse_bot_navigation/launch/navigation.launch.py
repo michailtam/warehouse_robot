@@ -73,6 +73,20 @@ def generate_launch_description():
         ],
     )
 
+    nav2_behaviours = Node(
+        package="nav2_behaviors",
+        executable="behavior_server",
+        name="behavior_server",
+        output="screen",
+        parameters=[
+            os.path.join(
+                warehouse_bot_navigation_pkg,
+                "config",
+                "behavior_server.yaml"),
+            {"use_sim_time": use_sim_time}
+        ],
+    )
+
     nav2_lifecycle_manager = Node(
         package="nav2_lifecycle_manager",
         executable="lifecycle_manager",
@@ -91,5 +105,6 @@ def generate_launch_description():
         nav2_planner_server,
         nav2_smoother_server,
         nav2_bt_navigator,
+        nav2_behaviours,
         nav2_lifecycle_manager,
     ])
