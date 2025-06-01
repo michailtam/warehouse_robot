@@ -1,5 +1,5 @@
 # Warehouse Robot Project in ROS2 Jazzy
-This is a ROS project where a robot navigates in a warehouse and avoids collisions with obstacles and workers. The software was developed on an Ubuntu **24.04.2 LTS (noble)** system in **Visual Studio Code**. The programming used was **Python**, because the language provides flexibility, is easy to handle and there are plenty libraries available which reduces the development time. 
+This is a ROS project where a robot navigates in a warehouse and avoids collisions with obstacles and workers. The software was developed on an Ubuntu **24.04.2 LTS (noble)** system in **Visual Studio Code** and programmed in **Python**. 
 
 ## Installation
 In order to run the application you have to install **ROS2 Jazzy** and some requiered packages for ROS2. To install ROS2 you can follow these [installation instructions](https://docs.ros.org/en/jazzy/Installation.html). I also, recommend to install the [Terminator](https://innovativeinnovation.github.io/ubuntu-setup/terminals/terminator.html).
