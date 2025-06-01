@@ -39,7 +39,7 @@ $ sudo apt-get install ros-jazzy-nav2*
 $ sudo apt install ros-jazzy-slam-toolbox
 ```
 
-### Clone the repository and build
+### Clone the repository and build it
 Create a directory with a name of your choice and clone the repository.
 ```
 $ git clone https://github.com/michailtam/warehouse_robot.git
