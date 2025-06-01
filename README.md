@@ -76,18 +76,18 @@ To visualize everything properly in rviz you need to make some settings.
 - Set Durability Policy for the `Map` to **Transiant Local**
 - Open Config -> /opt/ros/jazzy/share/nav2_bringup/rviz/nav2_default_view.rviz
 
-| <img src="./images/costmaps_local_global.png" alt="warehouse_slam_birds_eye" width="660" height="400" border="0" /> |
+| <img src="./images/costmaps_local_global.png" alt="warehouse_slam_birds_eye" width="500" height="400" border="0" /> |
 
 ## Screenshots of the simulation
 | **Warehouse** | **Warehouse** |
 |-----------------|-----------------|
-| <img src="./images/warehouse_slam_birds_eye.png" alt="warehouse_slam_birds_eye" width="660" height="400" border="0" />     | <img src="./images/warehouse_slam_birds_eye_02.png" alt="warehouse_slam_birds_eye_02" width="660" height="400" border="0" />     |
+| <img src="./images/warehouse_slam_birds_eye.png" alt="warehouse_slam_birds_eye" width="500" height="400" border="0" />     | <img src="./images/warehouse_slam_birds_eye_02.png" alt="warehouse_slam_birds_eye_02" width="500" height="400" border="0" />     |
 
 | **Static obstacle avoidance** | **Dynamic obstacle avoidance** |
 |-----------------|-----------------|
-| <img src="./images/warehouse_static_collision_recalc_new_path.png" alt="warehouse_static_collision_recalc_new_path" width="660" height="400" border="0" />     | <img src="./images/warehouse_dynamic_collision_recalc.png" alt="warehouse_dynamic_collision_recalc" width="660" height="400" border="0" />     |
+| <img src="./images/warehouse_static_collision_recalc_new_path.png" alt="warehouse_static_collision_recalc_new_path" width="500" height="400" border="0" />     | <img src="./images/warehouse_dynamic_collision_recalc.png" alt="warehouse_dynamic_collision_recalc" width="500" height="400" border="0" />     |
 
 | **Map creation** | **Map cleared with Gimp** |
 |-----------------|-----------------|
-| <img src="./images/slam_slam_toolbox.png" alt="slam_slam_toolbox" width="500" style="transform: rotate(180deg); height:400px" border="0" />     | <img src="./images/gimp.png" alt="cleared map" width="660" height="400" border="0" />     |
+| <img src="./images/slam_slam_toolbox.png" alt="slam_slam_toolbox" width="500" style="transform: rotate(180deg); height:400px" border="0" />     | <img src="./images/gimp.png" alt="cleared map" width="500" height="400" border="0" />     |
 
