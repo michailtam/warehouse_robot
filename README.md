@@ -76,7 +76,7 @@ To visualize everything properly in rviz you need to make some settings.
 - Set Durability Policy for the `Map` to **Transiant Local**
 - Open Config -> /opt/ros/jazzy/share/nav2_bringup/rviz/nav2_default_view.rviz
 
-| <img src="./images/costmaps_local_global.png" alt="warehouse_slam_birds_eye" width="500" height="400" border="0" /> |
+<img src="./images/costmaps_local_global.png" alt="warehouse_slam_birds_eye" width="500" height="400" border="0" /> 
 
 ## Screenshots of the simulation
 | **Warehouse** | **Warehouse** |
