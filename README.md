@@ -19,7 +19,7 @@ $ sudo apt install ros-jazzy-rqt-controller-manager
 $ sudo apt install ros-jazzy-image-transport ros-jazzy-rviz-image-tools
 ```
 
-### ROS2 Control and additional packages
+### ROS2 Control and required packages
 ```
 $ sudo apt-get update && sudo apt-get upgrade && sudo apt-get install ros-jazzy-*ros2-control*
 $ rosdep install -i --from-path src --rosdistro $ROS_DISTRO -y
@@ -31,7 +31,7 @@ $ sudo apt-get install ros-jazzy-tf-transformations
 $ sudo apt-get install ros-jazzy-key-teleop
 ```
 
-### Nav2 
+### Nav2 Stack
 ```
 $ sudo apt install ros-jazzy-navigation2
 $ sudo apt-get install ros-jazzy-nav2*
@@ -39,7 +39,7 @@ $ sudo apt-get install ros-jazzy-nav2*
 $ sudo apt install ros-jazzy-slam-toolbox
 ```
 
-### Clone the repository and build it
+### 1. Cloning the repository and building it
 Create a directory with a name of your choice and clone the repository.
 ```
 $ git clone https://github.com/michailtam/warehouse_robot.git
@@ -47,7 +47,7 @@ $ colcon build
 $ . install/setup.bash
 ```
 
-## Running the simulation:
+## 2. Running the simulation
 To run the simulation follow the bellow steps. **Note:** All steps, should be executed in order, 
 otherwise the simulation could not work properly.
 
@@ -71,14 +71,14 @@ $ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 $ ros2 launch warehouse_bot_navigation navigation.launch.py
 ```
 
-### Rviz configuration
+### 3. Configuring Rviz
 To visualize everything properly in rviz you need to make some settings.
 - Set Durability Policy for the `Map` to **Transiant Local**
 - Open Config -> /opt/ros/jazzy/share/nav2_bringup/rviz/nav2_default_view.rviz
 
 <img src="./images/costmaps_local_global.png" alt="warehouse_slam_birds_eye" width="500" height="400" border="0" /> 
 
-## Screenshots of the simulation
+## Screenshots
 | **Warehouse** | **Warehouse** |
 |-----------------|-----------------|
 | <img src="./images/warehouse_slam_birds_eye.png" alt="warehouse_slam_birds_eye" width="500" height="300" border="0" />     | <img src="./images/warehouse_slam_birds_eye_02.png" alt="warehouse_slam_birds_eye_02" width="500" height="300" border="0" />     |
