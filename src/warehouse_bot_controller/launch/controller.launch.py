@@ -15,6 +15,7 @@ def generate_launch_description():
         ],
     )
 
+    # Start the controllers for the wheels
     wheel_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",

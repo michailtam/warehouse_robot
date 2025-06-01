@@ -18,6 +18,7 @@ def generate_launch_description():
         default_value="true"
     )
 
+    # Start the server for the controller
     nav2_controller_server = Node(
         package="nav2_controller",
         executable="controller_server",
@@ -31,6 +32,7 @@ def generate_launch_description():
         ],
     )
     
+    # Start the planner for planning the path
     nav2_planner_server = Node(
         package="nav2_planner",
         executable="planner_server",
@@ -45,6 +47,7 @@ def generate_launch_description():
         ],
     )
 
+    # Start the smoother which smooths the path to the destination
     nav2_smoother_server = Node(
         package="nav2_smoother",
         executable="smoother_server",
@@ -59,6 +62,7 @@ def generate_launch_description():
         ],
     )
 
+    # Start the nav2 navigator for executing the navigation process
     nav2_bt_navigator = Node(
         package="nav2_bt_navigator",
         executable="bt_navigator",
@@ -73,6 +77,7 @@ def generate_launch_description():
         ],
     )
 
+    # Start the behavior of the robot when it cannot execute the navigation
     nav2_behaviours = Node(
         package="nav2_behaviors",
         executable="behavior_server",
@@ -87,6 +92,7 @@ def generate_launch_description():
         ],
     )
 
+    # Start the finate state machine for navigation 
     nav2_lifecycle_manager = Node(
         package="nav2_lifecycle_manager",
         executable="lifecycle_manager",
