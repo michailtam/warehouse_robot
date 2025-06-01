@@ -81,11 +81,11 @@ To visualize everything properly in rviz you need to make some settings.
 ## Screenshots of the simulation
 | **Warehouse** | **Warehouse** |
 |-----------------|-----------------|
-| <img src="./images/warehouse_slam_birds_eye.png" alt="warehouse_slam_birds_eye" width="500" height="400" border="0" />     | <img src="./images/warehouse_slam_birds_eye_02.png" alt="warehouse_slam_birds_eye_02" width="500" height="400" border="0" />     |
+| <img src="./images/warehouse_slam_birds_eye.png" alt="warehouse_slam_birds_eye" width="500" height="300" border="0" />     | <img src="./images/warehouse_slam_birds_eye_02.png" alt="warehouse_slam_birds_eye_02" width="500" height="300" border="0" />     |
 
 | **Static obstacle avoidance** | **Dynamic obstacle avoidance** |
 |-----------------|-----------------|
-| <img src="./images/warehouse_static_collision_recalc_new_path.png" alt="warehouse_static_collision_recalc_new_path" width="500" height="400" border="0" />     | <img src="./images/warehouse_dynamic_collision_recalc.png" alt="warehouse_dynamic_collision_recalc" width="500" height="400" border="0" />     |
+| <img src="./images/warehouse_static_collision_recalc_new_path.png" alt="warehouse_static_collision_recalc_new_path" width="500" height="300" border="0" />     | <img src="./images/warehouse_dynamic_collision_recalc.png" alt="warehouse_dynamic_collision_recalc" width="500" height="300" border="0" />     |
 
 | **Map creation** | **Map cleared with Gimp** |
 |-----------------|-----------------|
