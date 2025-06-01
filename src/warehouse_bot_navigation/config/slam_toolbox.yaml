@@ -1,3 +1,4 @@
+# Explanation of parameters: https://docs.ros.org/en/jazzy/p/slam_toolbox/index.html
 slam_toolbox:
   ros__parameters:
     use_sim_time: true

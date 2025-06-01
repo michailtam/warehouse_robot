@@ -22,6 +22,7 @@ def generate_launch_description():
     roll = LaunchConfiguration('roll')
     pitch = LaunchConfiguration('pitch')
     yaw = LaunchConfiguration('yaw')
+    use_sim_time = LaunchConfiguration("use_sim_time")
 
     # Set default launch arguments
     declare_x_pos_arg = DeclareLaunchArgument(
@@ -53,6 +54,11 @@ def generate_launch_description():
         name='yaw',
         default_value='-1.57',
         description='yaw angle of initial orientation in radians')
+    
+    declare_use_sim_time_arg = DeclareLaunchArgument(
+        "use_sim_time",
+        default_value="true"
+    )
 
     # Declare the launch arguments
     model_arg = DeclareLaunchArgument(
@@ -81,10 +87,10 @@ def generate_launch_description():
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
-        parameters=[{
-            "robot_description": robot_description,
-            "use_sim_time": True
-        }]
+        parameters=[
+            {"robot_description": robot_description},
+            {"use_sim_time": use_sim_time}
+        ]
     )
 
     # Launch the desired world in Gazebo
@@ -135,6 +141,7 @@ def generate_launch_description():
         declare_roll_arg,
         declare_pitch_arg,
         declare_yaw_arg,
+        declare_use_sim_time_arg,
         world_name_arg,
         gazebo_resource_path,
         robot_state_publisher_node,

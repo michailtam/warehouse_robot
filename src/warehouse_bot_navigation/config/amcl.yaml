@@ -1,3 +1,4 @@
+# Explanation of parameters: https://docs.nav2.org/configuration/packages/configuring-amcl.html#amcl
 amcl:
   ros__parameters:
     use_sim_time: True

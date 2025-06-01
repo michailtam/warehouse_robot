@@ -1,16 +1,9 @@
+# Explanation of parameters: https://docs.nav2.org/configuration/packages/configuring-costmaps.html
 planner_server:
   ros__parameters:
     expected_planner_frequency: 1.0
     use_sim_time: true
     planner_plugins: ["GridBased"]
-
-    # Dijkstra Planner parameters
-    # GridBased:
-    #   plugin: "warehouse_bot_navigation::DijkstraPlanner"
-
-    # A* Planner parameters
-    # GridBasedFast:
-    #   plugin: "warehouse_bot_navigation::AStarPlanner"
 
     # Smac 2D parameters
     GridBased:
@@ -41,7 +34,7 @@ global_costmap:
       robot_radius: 0.1
       resolution: 0.05
       track_unknown_space: true
-      plugins: ["static_layer", "obstacle_layer", "inοflation_layer"]
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True

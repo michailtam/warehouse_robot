@@ -1,3 +1,5 @@
+# Explanation of parameters: https://docs.nav2.org/configuration/packages/configuring-regulated-pp.html,
+# https://docs.nav2.org/configuration/packages/configuring-behavior-server.html
 controller_server:
   ros__parameters:
     use_sim_time: true
@@ -22,22 +24,6 @@ controller_server:
       xy_goal_tolerance: 0.25
       yaw_goal_tolerance: 0.25
       stateful: True
-    
-    # PD Motion Planner parameters
-    # FollowPath:
-    #   plugin: "bumperbot_motion::PDMotionPlanner"
-    #   kp: 2.0
-    #   kd: 0.1
-    #   max_linear_velocity: 0.3
-    #   max_angular_velocity: 1.0
-    #   step_size: 0.1
-
-    # Pure Pursuit parameters
-    # PurePursuit:
-    #   plugin: "bumperbot_motion::PurePursuit"
-    #   look_ahead_distance: 0.5
-    #   max_linear_velocity: 0.3
-    #   max_angular_velocity: 1.0
     
     # RPP parameters
     FollowPath:

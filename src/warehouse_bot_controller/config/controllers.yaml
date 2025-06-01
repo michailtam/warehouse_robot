@@ -1,3 +1,5 @@
+# Explanation of parameters:https://control.ros.org/jazzy/doc/ros2_controllers/diff_drive_controller/doc/userdoc.html
+
 controller_manager:
   ros__parameters:
     update_rate: 100 # Hz
