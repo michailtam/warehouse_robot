@@ -2,13 +2,13 @@
 This is a ROS project where a robot navigates in a warehouse and avoids collisions with obstacles and workers. The software was developed on an Ubuntu **24.04.2 LTS (noble)** system in **Visual Studio Code** and programmed in **Python**. 
 
 ## Installation
-In order to run the application you have to install **ROS2 Jazzy** and some requiered packages for ROS2. To install ROS2 you can follow these [installation instructions](https://docs.ros.org/en/jazzy/Installation.html). I also, recommend to install the [Terminator](https://innovativeinnovation.github.io/ubuntu-setup/terminals/terminator.html).
+In order to run the application you have to install **ROS2 Jazzy** and some required packages for ROS2. To install ROS2 you can follow these [installation instructions](https://docs.ros.org/en/jazzy/Installation.html). I also recommend to install the [Terminator](https://innovativeinnovation.github.io/ubuntu-setup/terminals/terminator.html).
 
 ### Required packages for ROS, Rviz and Gazebo
 ```
 $ sudo apt-get update && sudo apt-get upgrade
 $ sudo apt-get install python3-pip
-$ sudo install rosdep
+$ sudo apt install rosdep
 $ rosdep update
 $ rosdep install —from-paths src –y —ignore-src
 
